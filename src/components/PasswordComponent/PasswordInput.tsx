@@ -12,11 +12,12 @@ export const PasswordInput = ({
   return (
     <div className={styles["input-container"]}>
       <input
+        className={styles["password-input"]}
         type={showPassword ? "text" : "password"}
         value={password}
         onChange={onPasswordChange}
       />
-      <span onClick={toggleShowPassword}>
+      <span className={styles["eye-icon"]} onClick={toggleShowPassword}>
         {showPassword ? <VisibilityOff /> : <Visibility />}
       </span>
     </div>

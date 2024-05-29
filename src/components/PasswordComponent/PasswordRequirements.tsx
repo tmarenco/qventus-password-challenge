@@ -21,9 +21,13 @@ export const PasswordRequirements = ({
         return (
           <div key={index} className={styles["condition"]}>
             {isValid ? (
-              <CheckIcon style={{ backgroundColor: "var(--success-color)" }} />
+              <CheckIcon
+                className={`${styles["validation-icon"]} ${styles["success-color"]}`}
+              />
             ) : (
-              <CloseIcon style={{ backgroundColor: "var(--error-color)" }} />
+              <CloseIcon
+                className={`${styles["validation-icon"]} ${styles["error-color"]}`}
+              />
             )}
             <p className={styles["condition-description"]}>{requirement}</p>
           </div>
