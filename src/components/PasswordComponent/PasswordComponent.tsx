@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { validationRules } from "../../utils/validations";
 import { Title } from "./Title";
 import { PasswordInput } from "./PasswordInput";
 import { PasswordRequirements } from "./PasswordRequirements";
 import styles from "./password-component.module.css";
 import { PasswordComponentPropsInterface } from "../../interfaces/password-component-props.interface";
+import { PasswordRequirement } from "../../enums/password-requirements.enums";
 
 export const PasswordComponent = ({
   passwordRequirements,
@@ -12,9 +13,16 @@ export const PasswordComponent = ({
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
 
+  const initialValidationResults = useMemo(() => {
+    return Object.values(PasswordRequirement).reduce((acc, key) => {
+      acc[key] = false;
+      return acc;
+    }, {} as Record<PasswordRequirement, boolean>);
+  }, []);
+
   const [validationResults, setValidationResults] = useState<
-    Record<string, boolean>
-  >({});
+    Record<PasswordRequirement, boolean>
+  >(initialValidationResults);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const newPassword = e.target.value;
@@ -23,9 +31,14 @@ export const PasswordComponent = ({
   };
 
   const validatePassword = (password: string) => {
-    const results: Record<string, boolean> = {};
+    const results: Record<PasswordRequirement, boolean> = {
+      ...initialValidationResults,
+    };
     for (const key in validationRules) {
-      results[key] = validationRules[key].validation(password.trim());
+      console.log(validationResults);
+      results[key as PasswordRequirement] = validationRules[
+        key as PasswordRequirement
+      ].validation(password.trim());
     }
     setValidationResults(results);
   };

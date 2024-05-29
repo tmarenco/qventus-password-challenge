@@ -1,4 +1,6 @@
+import { PasswordRequirement } from "../enums/password-requirements.enums";
+
 export interface PasswordRequirementsPropsInterface {
-    passwordRequirements: string[];
-    validationResults: Record<string, boolean>;
+    passwordRequirements: PasswordRequirement[];
+    validationResults: Record<PasswordRequirement, boolean>;
   }
