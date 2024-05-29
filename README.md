@@ -63,6 +63,22 @@ First of all, thank you very much for this opportunity. I hope I did everything 
 
 ---
 
+## How to Build
+
+1. Build :
+
+   ```sh
+   npm run build
+   ```
+
+2. Command to get preview:
+
+   ```sh
+   npm run preview
+   ```
+
+---
+
 ## Personal Information
 
 - **Name**: Tomás Marenco
