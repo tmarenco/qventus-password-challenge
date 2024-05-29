@@ -35,7 +35,6 @@ export const PasswordComponent = ({
       ...initialValidationResults,
     };
     for (const key in validationRules) {
-      console.log(validationResults);
       results[key as PasswordRequirement] = validationRules[
         key as PasswordRequirement
       ].validation(password.trim());
