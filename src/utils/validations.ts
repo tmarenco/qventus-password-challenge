@@ -1,4 +1,3 @@
-// utils/validations.ts
 import { PasswordRequirement } from "../enums/password-requirements.enums";
 import { consecutiveLettersRegex } from "./consecutive-regex";
 
