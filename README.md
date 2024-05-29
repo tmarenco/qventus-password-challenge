@@ -29,15 +29,37 @@ First of all, thank you very much for this opportunity. I hope I did everything 
 
 ## How to Run the Project
 
-1. Install the dependencies:
+1. Clone the repository:
 
    ```sh
-   npm install
+   git clone https://github.com/tmarenco/qventus-password-challenge.git
+   cd qventus-password-challenge
    ```
 
-2. Start the development server:
+2. Access to the folder:
+
+   ```sh
+   cd qventus-password-challenge
+   ```
+
+3. Install the dependencies:
+
+```sh
+npm install
+```
+
+4. Start the development server:
+
    ```sh
    npm run dev
    ```
+
+---
+
+## Personal Information
+
+- **Name**: Tomás Marenco
+- **Email**: tmarencocastello@gmail.com
+- **LinkedIn**: https://www.linkedin.com/in/tmarenco/
 
 ---
