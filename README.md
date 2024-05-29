@@ -33,7 +33,6 @@ First of all, thank you very much for this opportunity. I hope I did everything 
 
    ```sh
    git clone https://github.com/tmarenco/qventus-password-challenge.git
-   cd qventus-password-challenge
    ```
 
 2. Access to the folder:
@@ -44,9 +43,9 @@ First of all, thank you very much for this opportunity. I hope I did everything 
 
 3. Install the dependencies:
 
-```sh
-npm install
-```
+   ```sh
+   npm install
+   ```
 
 4. Start the development server:
 
