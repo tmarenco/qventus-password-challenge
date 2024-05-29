@@ -1,10 +1,11 @@
 import { PasswordComponent } from "./components/PasswordComponent/PasswordComponent";
+import { PasswordRequirement } from "./enums/password-requirements.enums";
 
-const passwordRequirements = [
-  "Has one or more of these special characters: !@#$%^&*",
-  "Has a number / digit",
-  "Has an uppercase letter",
-  "Has NO consecutive letters",
+const passwordRequirements: PasswordRequirement[] = [
+  PasswordRequirement.SpecialCharacters,
+  PasswordRequirement.HasNumber,
+  PasswordRequirement.HasUppercase,
+  PasswordRequirement.NoConsecutiveLetters,
 ];
 
 function App() {
